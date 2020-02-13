@@ -1,5 +1,4 @@
-image:
-  file: Dockerfile
+image: gitpod/workspace-mysql
 ports:
 - port: 8001
   onOpen: open-browser
@@ -16,6 +15,9 @@ tasks:
 - name: Apache
   init: >
     composer install;
+    curl 'https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-all-languages.zip' > phpMyAdmin-5.0.1-all-languages.zip ;
+    unzip phpMyAdmin-5.0.1-all-languages.zip -d public ;
+    mv public/phpMyAdmin-5.0.1-all-languages/ public/phpmyadmin
   command: >
     apachectl start &&
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
