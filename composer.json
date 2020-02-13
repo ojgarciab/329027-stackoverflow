@@ -1,0 +1,12 @@
+{
+    "name": "gitpod/329027-stackoverflow",
+    "description": "Reproducción de https://es.stackoverflow.com/questions/329027/los-datos-no-se-insertan-en-la-bd",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Oscar García",
+            "email": "oscar.github@linaresdigital.com"
+        }
+    ],
+    "require": {}
+}
