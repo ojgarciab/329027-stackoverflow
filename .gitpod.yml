@@ -19,5 +19,6 @@ tasks:
     unzip phpMyAdmin-5.0.1-all-languages.zip -d public ;
     mv public/phpMyAdmin-5.0.1-all-languages/ public/phpmyadmin
   command: >
-    apachectl start &&
+    apachectl start ;
+    stty rows 23 ;
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
